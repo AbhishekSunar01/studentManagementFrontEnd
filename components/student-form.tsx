@@ -89,7 +89,7 @@ export function StudentForm({ onStudentCreated }: StudentFormProps) {
                 <Input placeholder="John Doe" {...field} />
               </FormControl>
               <FormDescription>
-                This will be the student's full name.
+                This will be the student&apos; full name.
               </FormDescription>
               <FormMessage />
             </FormItem>
@@ -109,7 +109,9 @@ export function StudentForm({ onStudentCreated }: StudentFormProps) {
                   {...field}
                 />
               </FormControl>
-              <FormDescription>The student's email address.</FormDescription>
+              <FormDescription>
+                The student&apos;s email address.
+              </FormDescription>
               <FormMessage />
             </FormItem>
           )}

@@ -1,6 +1,5 @@
 "use client";
-import { Calendar, Home, Inbox } from "lucide-react";
-import { usePathname } from "next/navigation";
+import { Home, Inbox } from "lucide-react";
 
 import {
   Sidebar,
@@ -39,7 +38,7 @@ export function AppSidebar() {
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <Link href={item.url} onClick={() => usePathname()}>
+                    <Link href={item.url}>
                       <item.icon />
                       <span>{item.title}</span>
                     </Link>
