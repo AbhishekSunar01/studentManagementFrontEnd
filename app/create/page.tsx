@@ -91,7 +91,10 @@ export default function Create() {
 
       <div className="w-full max-w-2xl ml-12">
         {/* Pass the same callback to StudentTable */}
-        <StudentTable students={students} onStudentDeleted={handleDataChange} />
+        <StudentTable
+          students={students}
+          onhandleDataChange={handleDataChange}
+        />
       </div>
     </div>
   );

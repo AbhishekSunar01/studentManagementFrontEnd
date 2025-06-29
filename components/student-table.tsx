@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/table";
 import { Card, CardHeader } from "./ui/card";
 import { DeleteStudent } from "./delete-student"; // Ensure this component is functional
+import { UpdateStudent } from "./update-student";
 
 type Student = {
   id: number; // Assuming 'id' is always present and unique for keying
@@ -22,12 +23,12 @@ type Student = {
 
 type StudentTableProps = {
   students: Student[];
-  onStudentDeleted: () => void; // New prop for refreshing
+  onhandleDataChange: () => void; // New prop for refreshing
 };
 
 export function StudentTable({
   students,
-  onStudentDeleted,
+  onhandleDataChange,
 }: StudentTableProps) {
   return (
     <Card className="p-6">
@@ -52,12 +53,17 @@ export function StudentTable({
               <TableCell>{student.name}</TableCell>
               <TableCell>{student.email}</TableCell>
               <TableCell>{student.section}</TableCell>
-              <TableCell className="text-right flex items-center justify-end">
+              <TableCell className="text-right flex items-center justify-end gap-2.5">
                 {/* For actual functionality, pass student.id to SquarePen */}
                 {/* Pass student.id to DeleteStudent */}
+                <UpdateStudent
+                  id={student.id}
+                  onStudentUpdated={onhandleDataChange} // Assuming this prop is used to refresh data
+                />
+                {/* Assuming UpdateStudent is a functional component that handles updates */}
                 <DeleteStudent
                   id={student.id}
-                  onStudentDeleted={onStudentDeleted}
+                  onStudentDeleted={onhandleDataChange}
                 />
               </TableCell>
             </TableRow>

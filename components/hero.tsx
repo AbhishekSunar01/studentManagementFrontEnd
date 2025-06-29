@@ -7,7 +7,7 @@ export function Hero() {
   return (
     <div className="h-[40rem] w-full flex flex-col items-center justify-center overflow-hidden rounded-md">
       <h4 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0]">
-        Wellcome to my project with next.js &
+        Welcome to project with next.js &
       </h4>
       <h1 className="md:text-7xl text-3xl lg:text-9xl font-bold text-center text-[#6DB33F] relative z-20 flex gap-9">
         Springboot
